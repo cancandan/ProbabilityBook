@@ -1,8 +1,8 @@
+
 ---
 title: "Chapter 5"
 output:
-  html_document:
-    df_print: paged
+  rmarkdown::github_document
 ---
 
 #1-a)
@@ -233,6 +233,7 @@ P(U<=x | U is in (3,7))
 is 
 
 P(U<=x,3<U<7)/P(3<U<7)=((x-3)/8)/(4/8) = (x-3)/4
+
 
 #11-a)
 
