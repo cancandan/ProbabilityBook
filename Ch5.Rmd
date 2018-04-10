@@ -186,15 +186,17 @@ its pdf is
 
 https://www.wolframalpha.com/input/?i=derivative+(2%2Fpi)*sin%5E-1(sqrt(x))
 
-for 0<x<1
+for $0<x<1$
+
 
 #7-b)
+
 its positive and integrates to 1
 
 #8-a)
 https://www.wolframalpha.com/input/?i=integral+12x%5E2(1-x)
 
-for 0<x<1
+for $0<x<1$
 
 #8-b)
 https://www.wolframalpha.com/input/?i=integral+12x%5E2(1-x)+from+0+to+1%2F2
@@ -207,10 +209,12 @@ https://www.wolframalpha.com/input/?i=integral+12x%5E3(1-x)+from+0+to+1
 which is 0.6
 
 E(X^2)
+
 https://www.wolframalpha.com/input/?i=integral+12x%5E4(1-x)+from+0+to+1
 
 which is 0.4
-0.4-(0.6)^2=0.04
+
+So 0.4-(0.6)^2=0.04
 
 #9)
 

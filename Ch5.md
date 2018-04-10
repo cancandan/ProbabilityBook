@@ -187,53 +187,64 @@ its pdf is
 
 <https://www.wolframalpha.com/input/?i=derivative+(2%2Fpi)*sin%5E-1(sqrt(x)>)
 
-for 0<x<1
+for 0 &lt; *x* &lt; 1
 
-#7-b)
+7-b)
+====
+
 its positive and integrates to 1
 
-#8-a)
-https://www.wolframalpha.com/input/?i=integral+12x%5E2(1-x)
+8-a)
+====
 
-for 0<x<1
+<https://www.wolframalpha.com/input/?i=integral+12x%5E2(1-x)>
 
-#8-b)
-https://www.wolframalpha.com/input/?i=integral+12x%5E2(1-x)+from+0+to+1%2F2
+for 0 &lt; *x* &lt; 1
 
-#8-c)
+8-b)
+====
+
+<https://www.wolframalpha.com/input/?i=integral+12x%5E2(1-x)+from+0+to+1%2F2>
+
+8-c)
+====
+
 Mean
 
-https://www.wolframalpha.com/input/?i=integral+12x%5E3(1-x)+from+0+to+1
+<https://www.wolframalpha.com/input/?i=integral+12x%5E3(1-x)+from+0+to+1>
 
 which is 0.6
 
 E(X^2)
-https://www.wolframalpha.com/input/?i=integral+12x%5E4(1-x)+from+0+to+1
+
+<https://www.wolframalpha.com/input/?i=integral+12x%5E4(1-x)+from+0+to+1>
 
 which is 0.4
-0.4-(0.6)^2=0.04
 
-#9)
+So 0.4-(0.6)^2=0.04
 
-1st quadrant in 
+9)
+==
 
-https://www.wolframalpha.com/input/?i=integral+1%2F(pi*(1%2Bx%5E2))
+1st quadrant in
 
+<https://www.wolframalpha.com/input/?i=integral+1%2F(pi*(1%2Bx%5E2)>)
 
-#10-a)
+10-a)
+=====
 
 1/8 is the pdf
 
-and (2-0)+(7-3)= 2+4=6
-answer is 6/8
+and (2-0)+(7-3)= 2+4=6 answer is 6/8
 
-#10-b)
+10-b)
+=====
 
-P(U<=x | U is in (3,7))
+P(U&lt;=x | U is in (3,7))
 
-is 
+is
 
-P(U<=x,3<U<7)/P(3<U<7)=((x-3)/8)/(4/8) = (x-3)/4
+P(U&lt;=x,3<U<7)/P(3<U<7)=((x-3)/8)/(4/8) = (x-3)/4
 
 
 #11-a)
