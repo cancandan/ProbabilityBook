@@ -258,6 +258,10 @@ E(U)=(a+b)/2 => 0 Var(U)=((b-a)^2)/2 =&gt; ((1--1)^2)/2=2
 11-b)
 =====
 
+$\\sqrt{27}$
+
+$\\\\sqrt{x}$
+
 CDF of *U*<sup>2</sup> is *P*(*U*<sup>2</sup> ≤ *x*)
 
 $P(|U| \\le \\sqrt{x})$
