@@ -17,7 +17,7 @@ Plugging in to the cdf of rayleigh F, F(3)-F(1) should be the answer
 
 If F(x)=1/j, whats x?
 
-or *F*<sup>−1</sup>(1/*j*)=?
+or *F*<sup>−</sup>1(1/*j*)=?
 
 q1=sqrt(-2\*log(1-1/4))
 
@@ -60,9 +60,11 @@ if its bigger than 1 it will make integral&gt;1 which is not allowed
 
 To be a valid pdf it must be &gt;0 and integrate to 1
 
-since f and F are &gt;0 g is also &gt;0 since *F*<sup>2</sup> is the antiderivative of *F**f*
+since f and F are &gt;0 g is also &gt;0
 
-*F*<sup>2</sup>|<sub>−∞</sub><sup>∞</sup>=1-0=1
+since *F*<sup>2</sup> is the antiderivative of *F**f*/2
+
+∫<sub>−∞</sub><sup>+∞</sup>*F*<sup>2</sup>*d**x*=1-0=1
 
 3-b)
 ====
@@ -187,7 +189,7 @@ its pdf is
 
 <https://www.wolframalpha.com/input/?i=derivative+(2%2Fpi)*sin%5E-1(sqrt(x)>)
 
-for 0 &lt; *x* &lt; 1
+for 0&lt;x&lt;1
 
 7-b)
 ====
@@ -199,7 +201,7 @@ its positive and integrates to 1
 
 <https://www.wolframalpha.com/input/?i=integral+12x%5E2(1-x)>
 
-for 0 &lt; *x* &lt; 1
+for 0&lt;x&lt;1
 
 8-b)
 ====
@@ -215,13 +217,9 @@ Mean
 
 which is 0.6
 
-E(X^2)
+E(X^2) <https://www.wolframalpha.com/input/?i=integral+12x%5E4(1-x)+from+0+to+1>
 
-<https://www.wolframalpha.com/input/?i=integral+12x%5E4(1-x)+from+0+to+1>
-
-which is 0.4
-
-So 0.4-(0.6)^2=0.04
+which is 0.4 0.4-(0.6)^2=0.04
 
 9)
 ==
@@ -244,32 +242,32 @@ P(U&lt;=x | U is in (3,7))
 
 is
 
-P(U&lt;=x,3<U<7)/P(3<U<7)=((x-3)/8)/(4/8) = (x-3)/4
+P(U&lt;=x,3&lt;U&lt;7)/P(3&lt;U&lt;7)
 
+equals to
 
-#11-a)
+((x-3)/8)/(4/8) = (x-3)/4
 
-If U~(a,b)
+11-a)
+=====
 
-E(U)=(a+b)/2 => 0 Var(U)=((b-a)^2)/2 =&gt; ((1--1)^2)/2=2
+*E*(*U*)=1
 
-*E*(*U*<sup>4</sup>)=1/2∫<sub>−1</sub><sup>1</sup>*U*<sup>4</sup> = 1/10(1 − −1)=1/5
+*V**a**r*(*U*)=(1 − −1)<sup>2</sup>/12 = 4/12 = 1/3
+
+*E*(*U*<sup>4</sup>)=1/2∫<sub>−1</sub><sup>1</sup>*u*<sup>4</sup>*d**u* = 1/10(1 − −1)=1/5
 
 11-b)
 =====
 
-$\\sqrt{27}$
+cdf is
 
-$\\\\sqrt{x}$
+$P(U^2\\le x)=P(|U|\\le x)=P(-\\sqrt x \\le U \\le \\sqrt x)$
 
-CDF of *U*<sup>2</sup> is *P*(*U*<sup>2</sup> ≤ *x*)
+$=\\int\_{-\\sqrt x}^{\\sqrt x} 1/2 = \\sqrt x$
 
-$P(|U| \\le \\sqrt{x})$
+pdf is the derivate of that
 
-$P(-\\sqrt x\\le U\\le \\sqrt x) = \\int\_{-\\sqrt x}^{\\sqrt x}(1/2)=\\sqrt x$
+$\\frac{x^-1/2}{2}$
 
-for 0 &lt; *x* &lt; 1, its 0 for *x* ≤ 0 and 1 for *x* ≤ 1
-
-PDF of *U*<sup>2</sup> is the derivative of the cdf
-
-for 0 &lt; *x* &lt; 1 its 1/2(*x*<sup>−1/2</sup>)
+not uniform
