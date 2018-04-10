@@ -248,7 +248,21 @@ Var(U)=((b-a)^2)/2 => ((1--1)^2)/2=2
 
 $E(U^4)=1/2\int_{-1}^{1}U^4=1/10(1--1)=1/5$
 
+#11-b)
 
+CDF of $U^2$ is $P(U^2\le x)$
+
+
+
+$P(|U| \le \sqrt{x})$
+
+$P(-\sqrt x\le U\le \sqrt x) = \int_{-\sqrt x}^{\sqrt x}(1/2)=\sqrt x$
+
+for $0<x<1$, its 0 for $x\le 0$ and 1 for $x\le1$
+
+PDF of $U^2$ is the derivative of the cdf
+
+for $0<x<1$ its $1/2(x^{-1/2})$
 
 
 

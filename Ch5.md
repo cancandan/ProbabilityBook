@@ -254,3 +254,18 @@ If U~(a,b)
 E(U)=(a+b)/2 => 0 Var(U)=((b-a)^2)/2 =&gt; ((1--1)^2)/2=2
 
 *E*(*U*<sup>4</sup>)=1/2∫<sub>−1</sub><sup>1</sup>*U*<sup>4</sup> = 1/10(1 − −1)=1/5
+
+11-b)
+=====
+
+CDF of *U*<sup>2</sup> is *P*(*U*<sup>2</sup> ≤ *x*)
+
+$P(|U| \\le \\sqrt{x})$
+
+$P(-\\sqrt x\\le U\\le \\sqrt x) = \\int\_{-\\sqrt x}^{\\sqrt x}(1/2)=\\sqrt x$
+
+for 0 &lt; *x* &lt; 1, its 0 for *x* ≤ 0 and 1 for *x* ≤ 1
+
+PDF of *U*<sup>2</sup> is the derivative of the cdf
+
+for 0 &lt; *x* &lt; 1 its 1/2(*x*<sup>−1/2</sup>)
