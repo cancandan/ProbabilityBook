@@ -264,10 +264,64 @@ not uniform
 
 
 
+#12
+
+Let stick length be 1
+
+and l be the length of longer piece
+
+then $1/2\le l \le 1$
+
+So $P(l<1/2)=0$ and $P(1\le l)=1$
+
+and whats of interest is the inside of this region.
+
+If its broken at 0<b<1
+
+l = max((1-b),b)
+
+now given a g $1/2\le g \le 1$
+
+we are looking for 
+
+$P(l\le g)$ 
+
+$=P(b\le g \ and \ 1-b\le g$
+
+$=P(1-g \le b\le g)$
+
+$=2g-1$
+
+this is the cdf.
+
+pdf is 2
+
+and $E(l)=\int_{1/2}^{1}2xdx=1-1/4=3/4$
+
+#13-a)
+
+$R=(1-Y)/Y$ and we know the distribution of Y from previous question.
+
+cdf is $P(R\le r)=P((1-Y)/Y\le r)=P(1/(r+1)\le Y)$
 
 
+$=1-P(Y<1/(r+1))=2(1/(r+1))-1=(1-r)/(1+r)$
 
+pdf is the derivative of that
 
+#13-b)
+
+using the pdf and lotus
+
+https://m.wolframalpha.com/input/?i=integral+2x%2F%281%2Bx%29%5E2+from+0+to+1
+
+#13-c)
+
+againg using the pdf and lotus
+
+https://m.wolframalpha.com/input/?i=integral+2%2Fx%281%2Bx%29%5E2+from+0+to+1
+
+it blows up
 
 
 

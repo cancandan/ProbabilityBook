@@ -291,6 +291,43 @@ $(document).ready(function () {
 <p><span class="math inline">\(\frac{x^-1/2}{2}\)</span></p>
 <p>not uniform</p>
 </div>
+<div id="section-1" class="section level1">
+<h1>12</h1>
+<p>Let stick length be 1</p>
+<p>and l be the length of longer piece</p>
+<p>then <span class="math inline">\(1/2\le l \le 1\)</span></p>
+<p>So <span class="math inline">\(P(l&lt;1/2)=0\)</span> and <span class="math inline">\(P(1\le l)=1\)</span></p>
+<p>and whats of interest is the inside of this region.</p>
+<p>If its broken at 0&lt;b&lt;1</p>
+<p>l = max((1-b),b)</p>
+<p>now given a g <span class="math inline">\(1/2\le g \le 1\)</span></p>
+<p>we are looking for</p>
+<p><span class="math inline">\(P(l\le g)\)</span></p>
+<p><span class="math inline">\(=P(b\le g \ and \ 1-b\le g\)</span></p>
+<p><span class="math inline">\(=P(1-g \le b\le g)\)</span></p>
+<p><span class="math inline">\(=2g-1\)</span></p>
+<p>this is the cdf.</p>
+<p>pdf is 2</p>
+<p>and <span class="math inline">\(E(l)=\int_{1/2}^{1}2xdx=1-1/4=3/4\)</span></p>
+</div>
+<div id="a-10" class="section level1">
+<h1>13-a)</h1>
+<p><span class="math inline">\(R=(1-Y)/Y\)</span> and we know the distribution of Y from previous question.</p>
+<p>cdf is <span class="math inline">\(P(R\le r)=P((1-Y)/Y\le r)=P(1/(r+1)\le Y)\)</span></p>
+<p><span class="math inline">\(=1-P(Y&lt;1/(r+1))=2(1/(r+1))-1=(1-r)/(1+r)\)</span></p>
+<p>pdf is the derivative of that</p>
+</div>
+<div id="b-10" class="section level1">
+<h1>13-b)</h1>
+<p>using the pdf and lotus</p>
+<p><a href="https://m.wolframalpha.com/input/?i=integral+2x%2F%281%2Bx%29%5E2+from+0+to+1">https://m.wolframalpha.com/input/?i=integral+2x%2F%281%2Bx%29%5E2+from+0+to+1</a></p>
+</div>
+<div id="c-3" class="section level1">
+<h1>13-c)</h1>
+<p>againg using the pdf and lotus</p>
+<p><a href="https://m.wolframalpha.com/input/?i=integral+2%2Fx%281%2Bx%29%5E2+from+0+to+1">https://m.wolframalpha.com/input/?i=integral+2%2Fx%281%2Bx%29%5E2+from+0+to+1</a></p>
+<p>it blows up</p>
+</div>
 
 
 
