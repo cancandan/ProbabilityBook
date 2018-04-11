@@ -386,4 +386,22 @@ $F^{-1}(x)=(-log(1-y))^{1/3}$
 plug in U to that
 
 
+#18-a)
+
+cdf is $\int_{1}^{z} ax^{-(a+1)} dx$  
+
+its increasing and integrates to 1
+
+$-x^{-a} \rvert_{1}^{\infty}=0--1=1$
+
+#18-b)
+
+the inverse of the cdf is
+
+$(-x)^{-1/a}$
+
+plug U to that
+
+
+#19)
 
