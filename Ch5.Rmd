@@ -305,7 +305,7 @@ $R=(1-Y)/Y$ and we know the distribution of Y from previous question.
 cdf is $P(R\le r)=P((1-Y)/Y\le r)=P(1/(r+1)\le Y)$
 
 
-$=1-P(Y<1/(r+1))=2(1/(r+1))-1=(1-r)/(1+r)$
+$=1-P(Y<1/(r+1))=1-(2(1/(r+1))-1)=2-2/(r+1)$
 
 pdf is the derivative of that
 
@@ -313,13 +313,13 @@ pdf is the derivative of that
 
 using the pdf and lotus
 
-https://m.wolframalpha.com/input/?i=integral+2x%2F%281%2Bx%29%5E2+from+0+to+1
+https://m.wolframalpha.com/input/?i=integral+2x%2F%28x%2B1%29%5E2+from+0+to+1
 
 #13-c)
 
 againg using the pdf and lotus
 
-https://m.wolframalpha.com/input/?i=integral+2%2Fx%281%2Bx%29%5E2+from+0+to+1
+https://m.wolframalpha.com/input/?i=integral+2%2Fx%28x%2B1%29%5E2+from+0+to+1
 
 it blows up
 
