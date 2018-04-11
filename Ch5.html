@@ -235,98 +235,24 @@ $(document).ready(function () {
 <p>F is increasing, right cont and converges to 0 and 1 for -infinity, +infinity (ie 0 and 1)</p>
 <p>its pdf is</p>
 <p><a href="https://www.wolframalpha.com/input/?i=derivative+(2%2Fpi)*sin%5E-1(sqrt(x)">https://www.wolframalpha.com/input/?i=derivative+(2%2Fpi)*sin%5E-1(sqrt(x)</a>)</p>
-<p>for 0&lt;x&lt;1</p>
+<p>for 0<x<1 #7-b) its positive and integrates to 1 #8-a) https: www.wolframalpha.com input ?i="integral+12x%5E2(1-x)" for 0<x<1 #8-b) https: www.wolframalpha.com input ?i="integral+12x%5E2(1-x)+from+0+to+1%2F2" #8-c) Mean https: www.wolframalpha.com input ?i="integral+12x%5E3(1-x)+from+0+to+1" which is 0.6 E(X^2) https: www.wolframalpha.com input ?i="integral+12x%5E4(1-x)+from+0+to+1" which is 0.4 0.4-(0.6)^2="0.04" #9) 1st quadrant in https: www.wolframalpha.com input ?i="integral+1%2F(pi*(1%2Bx%5E2))" #10-a) 1 8 is the pdf and (2-0)+(7-3)="2+4=6" answer is 6 8 #10-b) P(U<="x" | U is in (3,7)) is P(U<="x,3&lt;U&lt;7)/P(3&lt;U&lt;7)" equals to ((x-3) 8) (4 8)="(x-3)/4" #11-a) $E(U)="1$" $Var(U)="(1--1)^2/12=" 4 12="1/3$" $E(U^4)="1/2\int_{-1}^{1}u^4du" = 1 10(1--1)="1/5$" #11-b) cdf is $P(U^2\le x)="P(|U|\le" x)="P(-\sqrt" x \le U \le \sqrt x)$ $="\int_{-\sqrt" x}^{\sqrt x} 1 2="\sqrt" x$ pdf is the derivate of that $\frac{x^-1 2}{2}$ not uniform #12 Let stick length be 1 and l be the length of longer piece then $1 2\le l \le 1$ So $P(l<1 2)="0$" and $P(1\le l)="1$" and whats of interest is the inside of this region. If its broken at 0<b<1 l="max((1-b),b)" now given a g $1 2\le g \le 1$ we are looking for $P(l\le g)$ $="P(b\le" g \ and \ 1-b\le g$ $="P(1-g" \le b\le g)$ $="2g-1$" this is the cdf. pdf is 2 and $E(l)="\int_{1/2}^{1}2xdx=1-1/4=3/4$" #13-a) $R="(1-Y)/Y$" and we know the distribution of Y from previous question. cdf is $P(R\le r)="P((1-Y)/Y\le" r)="P(1/(r+1)\le" Y)$ $="1-P(Y&lt;1/(r+1))=1-(2(1/(r+1))-1)=2-2/(r+1)$" pdf is the derivative of that #13-b) using the pdf and lotus https: m.wolframalpha.com input ?i="integral+2x%2F%28x%2B1%29%5E2+from+0+to+1" #13-c) againg using the pdf and lotus https: m.wolframalpha.com input ?i="integral+2%2Fx%28x%2B1%29%5E2+from+0+to+1" it blows up #14) $P(X\le x)="P(U_1,U_2,..,U_n\le" x)$ since iid $="\prod" P(U_i\le x)="x^n$" pdf is the derivative of that use lotus to find the E(X) https: m.wolframalpha.com input ?i="integral+nx%5En" #15) $U\sim Unif(0,1)$ If $X\sim Expo(\lambda)$ then $F(x)="1-e^{-\lambda" x)}$ By universality of the Uniform $F^{-1} (U) \sim Expo(\lambda)$ $F^{-1}="-log(1-x)/\lambda$" $F^{-1}(U)="-log(1-U)/\lambda" \sim Expo(\lambda)$ #16-a) X is a function of U> f(U)</p>
+<p>X^2 is also a function of U =&gt; g(U)=f^2(U)</p>
+<p>and pdf of U is 1</p>
+<p>so using LOTUS</p>
+<p><span class="math inline">\(\int log(U/(1-U))^2 dx\)</span></p>
 </div>
 <div id="b-6" class="section level1">
-<h1>7-b)</h1>
-<p>its positive and integrates to 1</p>
-</div>
-<div id="a-7" class="section level1">
-<h1>8-a)</h1>
-<p><a href="https://www.wolframalpha.com/input/?i=integral+12x%5E2(1-x)">https://www.wolframalpha.com/input/?i=integral+12x%5E2(1-x)</a></p>
-<p>for 0&lt;x&lt;1</p>
-</div>
-<div id="b-7" class="section level1">
-<h1>8-b)</h1>
-<p><a href="https://www.wolframalpha.com/input/?i=integral+12x%5E2(1-x)+from+0+to+1%2F2">https://www.wolframalpha.com/input/?i=integral+12x%5E2(1-x)+from+0+to+1%2F2</a></p>
-</div>
-<div id="c-2" class="section level1">
-<h1>8-c)</h1>
-<p>Mean</p>
-<p><a href="https://www.wolframalpha.com/input/?i=integral+12x%5E3(1-x)+from+0+to+1">https://www.wolframalpha.com/input/?i=integral+12x%5E3(1-x)+from+0+to+1</a></p>
-<p>which is 0.6</p>
-<p>E(X^2) <a href="https://www.wolframalpha.com/input/?i=integral+12x%5E4(1-x)+from+0+to+1">https://www.wolframalpha.com/input/?i=integral+12x%5E4(1-x)+from+0+to+1</a></p>
-<p>which is 0.4 0.4-(0.6)^2=0.04</p>
+<h1>16-b)</h1>
+<p><span class="math inline">\(E(log(U/(1-U)))=E(log(U)-log(1-U))\)</span></p>
+<p><span class="math inline">\(=E(log(U))-E(log(1-U))=0\)</span></p>
+<p>since U and 1-U have the same distribution</p>
 </div>
 <div id="section" class="section level1">
-<h1>9)</h1>
-<p>1st quadrant in</p>
-<p><a href="https://www.wolframalpha.com/input/?i=integral+1%2F(pi*(1%2Bx%5E2)">https://www.wolframalpha.com/input/?i=integral+1%2F(pi*(1%2Bx%5E2)</a>)</p>
-</div>
-<div id="a-8" class="section level1">
-<h1>10-a)</h1>
-<p>1/8 is the pdf</p>
-<p>and (2-0)+(7-3)= 2+4=6 answer is 6/8</p>
-</div>
-<div id="b-8" class="section level1">
-<h1>10-b)</h1>
-<p>P(U&lt;=x | U is in (3,7))</p>
-<p>is</p>
-<p>P(U&lt;=x,3&lt;U&lt;7)/P(3&lt;U&lt;7)</p>
-<p>equals to</p>
-<p>((x-3)/8)/(4/8) = (x-3)/4</p>
-</div>
-<div id="a-9" class="section level1">
-<h1>11-a)</h1>
-<p><span class="math inline">\(E(U)=1\)</span></p>
-<p><span class="math inline">\(Var(U)=(1--1)^2/12= 4/12=1/3\)</span></p>
-<p><span class="math inline">\(E(U^4)= 1/2\int_{-1}^{1}u^4du = 1/10(1--1)=1/5\)</span></p>
-</div>
-<div id="b-9" class="section level1">
-<h1>11-b)</h1>
-<p>cdf is</p>
-<p><span class="math inline">\(P(U^2\le x)=P(|U|\le x)=P(-\sqrt x \le U \le \sqrt x)\)</span></p>
-<p><span class="math inline">\(=\int_{-\sqrt x}^{\sqrt x} 1/2 = \sqrt x\)</span></p>
-<p>pdf is the derivate of that</p>
-<p><span class="math inline">\(\frac{x^-1/2}{2}\)</span></p>
-<p>not uniform</p>
-</div>
-<div id="section-1" class="section level1">
-<h1>12</h1>
-<p>Let stick length be 1</p>
-<p>and l be the length of longer piece</p>
-<p>then <span class="math inline">\(1/2\le l \le 1\)</span></p>
-<p>So <span class="math inline">\(P(l&lt;1/2)=0\)</span> and <span class="math inline">\(P(1\le l)=1\)</span></p>
-<p>and whats of interest is the inside of this region.</p>
-<p>If its broken at 0&lt;b&lt;1</p>
-<p>l = max((1-b),b)</p>
-<p>now given a g <span class="math inline">\(1/2\le g \le 1\)</span></p>
-<p>we are looking for</p>
-<p><span class="math inline">\(P(l\le g)\)</span></p>
-<p><span class="math inline">\(=P(b\le g \ and \ 1-b\le g\)</span></p>
-<p><span class="math inline">\(=P(1-g \le b\le g)\)</span></p>
-<p><span class="math inline">\(=2g-1\)</span></p>
-<p>this is the cdf.</p>
-<p>pdf is 2</p>
-<p>and <span class="math inline">\(E(l)=\int_{1/2}^{1}2xdx=1-1/4=3/4\)</span></p>
-</div>
-<div id="a-10" class="section level1">
-<h1>13-a)</h1>
-<p><span class="math inline">\(R=(1-Y)/Y\)</span> and we know the distribution of Y from previous question.</p>
-<p>cdf is <span class="math inline">\(P(R\le r)=P((1-Y)/Y\le r)=P(1/(r+1)\le Y)\)</span></p>
-<p><span class="math inline">\(=1-P(Y&lt;1/(r+1))=1-(2(1/(r+1))-1)=2-2/(r+1)\)</span></p>
-<p>pdf is the derivative of that</p>
-</div>
-<div id="b-10" class="section level1">
-<h1>13-b)</h1>
-<p>using the pdf and lotus</p>
-<p><a href="https://m.wolframalpha.com/input/?i=integral+2x%2F%28x%2B1%29%5E2+from+0+to+1">https://m.wolframalpha.com/input/?i=integral+2x%2F%28x%2B1%29%5E2+from+0+to+1</a></p>
-</div>
-<div id="c-3" class="section level1">
-<h1>13-c)</h1>
-<p>againg using the pdf and lotus</p>
-<p><a href="https://m.wolframalpha.com/input/?i=integral+2%2Fx%28x%2B1%29%5E2+from+0+to+1">https://m.wolframalpha.com/input/?i=integral+2%2Fx%28x%2B1%29%5E2+from+0+to+1</a></p>
-<p>it blows up</p>
+<h1>17)</h1>
+<p>By universality of the Uniform</p>
+<p><span class="math inline">\(X=F^{-1} (U)\)</span> has cdf F</p>
+<p><span class="math inline">\(F^{-1}(x)=(-log(1-y))^{1/3}\)</span></p>
+<p>plug in U to that</p>
 </div>
 
 

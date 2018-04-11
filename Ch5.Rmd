@@ -323,6 +323,67 @@ https://m.wolframalpha.com/input/?i=integral+2%2Fx%28x%2B1%29%5E2+from+0+to+1
 
 it blows up
 
+#14)
+
+$P(X\le x)=P(U_1,U_2,..,U_n\le x)$
+
+since iid
+
+$=\prod P(U_i\le x)=x^n$
+
+pdf is the derivative of that
+
+use lotus to find the E(X)
+
+https://m.wolframalpha.com/input/?i=integral+nx%5En
+
+#15)
+
+$U\sim Unif(0,1)$
+
+If $X\sim Expo(\lambda)$
+
+then 
+
+$F(x)=1-e^{-\lambda x)}$
+
+By universality of the Uniform
+
+$F^{-1} (U) \sim Expo(\lambda)$
+
+$F^{-1}=-log(1-x)/\lambda$
+
+$F^{-1}(U)=-log(1-U)/\lambda \sim Expo(\lambda)$
+
+#16-a)
+
+X is a function of U => f(U)
+
+X^2 is also a function of U => g(U)=f^2(U)
+
+and pdf of U is 1
+
+so using LOTUS
+
+$\int log(U/(1-U))^2 dx$
+
+#16-b)
+
+$E(log(U/(1-U)))=E(log(U)-log(1-U))$
+
+$=E(log(U))-E(log(1-U))=0$
+
+since U and 1-U have the same distribution
+
+#17)
+
+By universality of the Uniform
+
+$X=F^{-1} (U)$ has cdf F
+
+$F^{-1}(x)=(-log(1-y))^{1/3}$
+
+plug in U to that
 
 
 
