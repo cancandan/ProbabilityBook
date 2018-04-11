@@ -405,3 +405,30 @@ plug U to that
 
 #19)
 
+If $U\sim Unif(0,1)$ then $X=F^{-1}(U)\sim F$
+
+since pdf of Uniform is 1
+
+$\int_{0}^{1}F^{-1}(u)du=E(X)$ 
+
+#20-a)
+
+$\int_{0}^{\infty}P(X>x)dx$
+
+$=\int_{0}^{\infty}(1-P(X\le x))dx$
+
+$=\int_{0}^{\infty}1dx-\int_{0}^{\infty}P(X\le x))dx$
+
+if you draw some cdf and check what this expression corresponds to, you will see that it is the are under the curve of the inverse of F from 0 to 1.
+
+#20-b)
+
+Using the previous result
+
+$E(X)=\int_{0}^{\infty}P(X>t)dt$
+
+$= \int_{0}^{\infty}E(I(X>t))dt$
+
+swapping E and the integral we have 
+
+$E(X)= E\int_{0}^{\infty}I(X>t)dt$
