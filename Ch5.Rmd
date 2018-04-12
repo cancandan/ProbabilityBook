@@ -485,3 +485,19 @@ If $X \sim N(\mu,\sigma ^2)$
 then $\frac{X-\mu}{\sigma} \sim N(0,1)$
 
 so $\mu+\sigma$ $\mu-\sigma$
+
+#24)
+
+Let X be the observed distance
+
+$X=10+\epsilon$ where $\epsilon \sim N(0,0.04)$
+
+$P(9.6 \le X \le 10.4 )=?$
+
+$=P(9.6 \le 10+\epsilon \le 10.4 )$
+
+$=P(-0.4 \le \epsilon \le 0.4)$
+
+$=\phi(0.4/\sqrt{0.04})-\phi(-0.4/\sqrt{0.04})$
+
+$=\phi(2)-\phi(-2) \approx 0.95$
