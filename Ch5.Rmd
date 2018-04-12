@@ -501,3 +501,23 @@ $=P(-0.4 \le \epsilon \le 0.4)$
 $=\phi(0.4/\sqrt{0.04})-\phi(-0.4/\sqrt{0.04})$
 
 $=\phi(2)-\phi(-2) \approx 0.95$
+
+#25-a)
+
+P(interpret 1 | sent 1) = P(1/2<received)
+= P(0.5<1+error)
+= P(-0.5<error)
+$= 1-\phi(-0.5/\sigma)$
+
+
+P(interpret 0 | sent 0) = P(received<1/2)
+= P(0+error<0.5)
+$= \phi(0.5/\sigma)$
+
+So in both cases the probability Bob understands is the same, eg. if 1/2 is the probability of sending 1 or 0 then the overall understanding probability is the same 
+
+$2\phi(0.5/\sigma)1/2= \phi(0.5/\sigma)$
+
+#25-b)
+
+if $\sigma is very small this probability is close to 1, if very large its close to 0.5, ie random, makes sense.
