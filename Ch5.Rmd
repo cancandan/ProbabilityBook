@@ -545,3 +545,45 @@ pnorm(4/sqrt(9+49))=`r pnorm(4/sqrt(9+49))`
 or
 pnorm(0,-4,sqrt(9+49))=`r pnorm(0,-4,sqrt(9+49))`
 
+#28-a)
+
+Let X,Y be the times (rvs) Walter and Carl arrives.
+
+$X \sim N(w,\sigma^2)$
+
+$Y \sim N(c,4\sigma^2)$
+
+$Y-X \sim N(c-w,5\sigma^2)$
+
+$P(Y<X)=P(Y-X<0)=\phi(\frac{0-(c-w)}{\sigma\sqrt{5}})$ 
+
+#28-b)
+
+The criterion is 
+$\phi(\frac{0-(c-w)}{\sigma\sqrt{5}})>0.5$
+
+ie. w-c>0
+
+#28-c)
+
+P(Carl on time)>P(Walter on time)
+
+$P(Y<w+10)>P(X<w+10)$
+
+
+$\phi(\frac{w+10-c}{\sigma})> \phi(\frac{w+10-w}{2\sigma})$
+
+ie. 
+
+$\phi(\frac{w+10-c}{\sigma})> \phi(\frac{5}{\sigma})$
+
+ie. 
+
+$w+10-c>5$
+
+ie. 
+
+$w+5>c$
+
+
+
