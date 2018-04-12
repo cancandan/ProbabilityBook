@@ -469,3 +469,19 @@ $erf(\frac{z}{\sqrt 2})=2\phi(z)-1$
 $erf(z)=2\phi(z\sqrt 2)-1$ this is the area between two limits $z/\sqrt 2$ and $-z/\sqrt 2$
 
 erf(-z) is the negative of that
+
+#23-a)
+
+the second derivative of normal pdf is 
+
+https://m.wolframalpha.com/input/?i=2nd+derivative+e%5E%28-%28x%5E2%29%2F2%29%2Fsqrt%282pi%29
+
+changes sign at -1 and 1
+
+#23-b)
+
+If $X \sim N(\mu,\sigma ^2)$
+
+then $\frac{X-\mu}{\sigma} \sim N(0,1)$
+
+so $\mu+\sigma$ $\mu-\sigma$
