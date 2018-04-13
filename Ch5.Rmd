@@ -504,9 +504,9 @@ $=\phi(2)-\phi(-2) \approx 0.95$
 
 #25-a)
 
-P(interpret 1 | sent 1) = P(1/2<received)
-= P(0.5<1+error)
-= P(-0.5<error)
+$P(interpret 1 | sent 1) = P(1/2<received)$
+$= P(0.5<1+error)$
+$= P(-0.5<error)$
 $= 1-\phi(-0.5/\sigma)$
 
 
