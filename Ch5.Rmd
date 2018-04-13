@@ -598,3 +598,12 @@ plot(x, y, type="l", lwd=1)
 ```
 
 
+#30)
+
+$(Y-1.96,Y+1.96)$
+
+eg with mean 0.3
+
+```{r, echo=TRUE, eval=TRUE}
+pnorm(0.3+1.96,mean=0.3,sd=1)-pnorm(0.3-1.96,mean=0.3,sd=1)
+```
