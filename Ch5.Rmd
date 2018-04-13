@@ -602,8 +602,30 @@ plot(x, y, type="l", lwd=1)
 
 $(Y-1.96,Y+1.96)$
 
-eg with mean 0.3
+Here $\mu$ is considered unknown.
+
+#31-a)
+
+Y=|X|
+
+$cdf(Y)=P(|X|<y)=P(-y\le X\le y)=\Phi(\frac{y-\mu}{\sigma})-\Phi(\frac{-y-\mu}{\sigma})$
+
+#31-b)
+
+$(\phi(\frac{y-\mu}{\sigma})+\phi(\frac{-y-\mu}{\sigma}))\frac{1}{\sigma}$
+
+#31-c)
+
+Yes, for example 
 
 ```{r, echo=TRUE, eval=TRUE}
-pnorm(0.3+1.96,mean=0.3,sd=1)-pnorm(0.3-1.96,mean=0.3,sd=1)
+y <- seq(0, 2, length=1000)
+z<-(dnorm((y-1)/2,mean=1,sd=2)+dnorm((-y-1)/2,mean=1,sd=2))/2
+plot(y, z, type="l", lwd=1)
 ```
+
+#32)
+
+$P(SZ<x)=P(Z \le x|S=1)P(S=1)+P(-x\le Z |S=-1)P(S=-1)$
+
+$= P(Z \le x|S=1)$ => its N(0,1)
