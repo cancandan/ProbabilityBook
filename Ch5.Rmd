@@ -585,5 +585,16 @@ ie.
 
 $w+5>c$
 
+#29)
+
+If you fix (-1,1) and move that interval along the x-axis, the area never increases.
+
+eg.
+
+```{r, echo=TRUE, eval=TRUE}
+x <- seq(0, 3, length=1000)
+y <- pnorm(1+x)-pnorm(x-1)
+plot(x, y, type="l", lwd=1)
+```
 
 
