@@ -606,7 +606,12 @@ Here $\mu$ is considered unknown.
 
 #31-a)
 
+
 Y=|X|
+
+This is called a folded normal distribution.
+https://en.wikipedia.org/wiki/Folded_normal_distribution
+
 
 $cdf(Y)=P(|X|<y)=P(-y\le X\le y)=\Phi(\frac{y-\mu}{\sigma})-\Phi(\frac{-y-\mu}{\sigma})$
 
@@ -616,16 +621,71 @@ $(\phi(\frac{y-\mu}{\sigma})+\phi(\frac{-y-\mu}{\sigma}))\frac{1}{\sigma}$
 
 #31-c)
 
-Yes, for example 
+Its not continuous at 0 because its 0 for x<0.
+However this is not a problem to find probabilities.
+
+for x>0 it looks like this
 
 ```{r, echo=TRUE, eval=TRUE}
-y <- seq(0, 2, length=1000)
+y <- seq(0, 20, length=1000)
 z<-(dnorm((y-1)/2,mean=1,sd=2)+dnorm((-y-1)/2,mean=1,sd=2))/2
 plot(y, z, type="l", lwd=1)
 ```
 
+
 #32)
 
-$P(SZ<x)=P(Z \le x|S=1)P(S=1)+P(-x\le Z |S=-1)P(S=-1)$
+$P(SZ<x)=P(SZ \le x|S=1)P(S=1)+P(-x\le SZ |S=-1)P(S=-1)$
 
-$= P(Z \le x|S=1)$ => its N(0,1)
+$= P(Z \le x)$ => its N(0,1)
+
+#33)
+
+$\Phi(Z)$ is a symmetric (wrt y=0.5) function
+from (-infinity, +infinity) to (0,1)
+
+so 0.5 must be the expectation
+
+Also by universality of uniform $\Phi(Z)\sim Unif(0,1)$
+So $E(\Phi(Z))=1/2$
+
+#34-a)
+
+$P(1\le X\le 4)$ corresponds to the region 
+
+X being in (-2,-1) U (1,2)
+
+this is $\phi(2)-\phi(1)+\phi(-1)+\phi(-2)$
+
+so $2(\phi(2)-\phi(1))=(0.95-0.68)$
+
+#34-b)
+
+$E(I(Z\gt t))\le \frac{1}{t}E(ZI(X\gt t))$
+
+$\frac{1}{t}E(ZI(X\gt t))$
+$=\frac{1}{t}\int_{\infty}^{\infty}zI(z>t)\phi(z)dz$
+$=\frac{1}{t}\int_{t}^{\infty}z\phi(z)dz$
+
+let $u=z^2/2$
+
+then its possible to find the antiderivative of
+
+$z\phi(z)$
+
+$\int z\phi(z)dz=\int ze^{-z^2/2}dz=\int e^{-u}du=-e^{-u}+C=-e^{-x^2/2}+C$
+
+So
+
+$P(Z>t)\le \frac{1}{\sqrt{2\pi}t}\phi(t)$
+
+So 
+
+$P(Z>t)\le \frac{1}{t}\phi(t)$
+
+So 
+
+$1-\frac{1}{t}\phi(t)\le \Phi(t)$
+
+
+
