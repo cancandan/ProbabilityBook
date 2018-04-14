@@ -687,5 +687,40 @@ So
 
 $1-\frac{1}{t}\phi(t)\le \Phi(t)$
 
+#35-a)
+
+based on pdf o Z
+
+$\int_{-\infty}^{+\infty} z^4 \phi(z) dz$
+
+$=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty} z^4 e^{-z^2/2} dz$
+
+based on pdf o Z^2
+
+$\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty} \frac{1}{\sqrt{w}}w^2e^{-w/2}dw$
+
+#35-b)
+
+$E(Z^2)=Var(Z)+E^2(Z)=1$
+
+$E(Z)=0$
+
+$E(\Phi(Z))=1/2$ by univ. of unif
+
+#35-c)
+
+$P(Z^2\le z)=P(-z\le Z\le z)=\Phi(z)-\Phi(-z)$
+
+#36)
+
+$E(ZI_{Z>0})=\int_{-\infty}^{+\infty}zI_{z>0}\phi(z)dz$
+
+$=\int_{0}^{+\infty}z\phi(z)dz=\frac{1}{\sqrt{2\pi}}e^{-z^2/2} \rvert_{0}^{\infty}=\frac{1}{\sqrt{2\pi}}$
+
+$E((ZI_{Z>0})^2)=\int_{0}^{+\infty}z^2\phi(z)dz=\sqrt{2\pi}/2$
+
+its in the book p214
+
+#37)
 
 
