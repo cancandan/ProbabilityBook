@@ -770,10 +770,88 @@ $=11/6\lambda$
 
 with $\lambda=1/6$ this gives 11 agreeing the simulation above.
 
+By direct calculation
+
+https://m.wolframalpha.com/input/?i=integral+1%2F2x%28e%5E%28-x%2F2%29%29%28e%5E%28x%2F6%29-1%29%5E2+from+0+to+infinity
+
+#40-a)
+
+$P(T<x)=F(x)=0.5$
+
+$x=F^{-1}(0.5)$
+
+$F^{-1}(x)=-\frac{log(1-x)}{\lambda}$
+
+$F^{-1}(0.5)=-\frac{log(0.5)}{\lambda}$
+
+#40-b)
+
+$\frac{F(t+\epsilon)-F(t)}{1-F(t)}$
+
+$=\frac{(1-e^{-\lambda (t+\epsilon)})-(1-e^{-\lambda t})}{1-(1-e^{-\lambda t})}$
+
+$=\frac{e^{-\lambda t}-e^{-\lambda (t+\epsilon)}}{e^{-\lambda t}}$
+
+$=1-e^{-\lambda \epsilon}$
+
+Since for $x\approx 0$ we have
+$e^{x}\approx 1+x$
+
+$e^{-x}\approx 1-x$
+
+So
+
+$=1-e^{-\lambda \epsilon}=1-(1-\epsilon)=\epsilon$
+
+#40-c)
+
+$min(T_i)\sim Expo(n\lambda)$ for $T_i\sim Expo(\lambda)$
+
+#40-d) 
+
+Similar to what we did on 39
+
+#41-a)
+
+The probability that an offer is more than 15000 is
+
+```{r, echo=TRUE, eval=TRUE}
+1-pexp(15000,rate=10^-4)
+```
+
+https://m.wolframalpha.com/input/?i=sum+%281%2Bi%29p%281-p%29%5Ei+from+i%3D0+to+infinity%2C+p%3D0.2231302
+
+This is the mean of the First Success distribution with p=
+
+```{r, echo=TRUE, eval=TRUE}
+1-pexp(15000,rate=10^-4)
+```
 
 
+#41-b)
+
+Conditional pdf is NOT the same as unconditional but shifted because of memorylessness, so if f(t) is the pdf f(t-x) is the conditional pdf
+
+so 15000+10000 is the expected sale price
 
 
+#42-a)
 
+10
 
+#42-b)
 
+Distribution example:
+
+Consider:
+
+|min|probability|
+|---|----|
+|1|90/99|
+|100|9/99|
+
+here bus to bus mean is 10
+
+But Fred to bus mean is (1/101)+(100/101)100
+
+because Fred 100 times more likely to arrive at a 100 min interarrival  duration then a 1 min one.
