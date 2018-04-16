@@ -884,6 +884,30 @@ By direct calculation, 1-(the result below)
 
 https://m.wolframalpha.com/input/?i=integrate+%28sum+%28%28%287t%29%5Ek%29%28e%5E%28-7t%29%29%29%2Fk%21+from+k%3D0+to+4%29+%283e%5E%28-3t%29%29+dt+from+0+to+infinity
 
+Cool!
 
+#43-c)
+
+max of expos, done before, see 39
+
+#44) 
+
+Done in solutions manual
+
+#45-a)
+
+if G is n, T is $n\Delta t$
+
+#45-b)
+
+If time is t, G is $t/\Delta t$ by a
+
+$P(T>t)=1-(1-\lambda\Delta t)^{t/\Delta t}$
+
+#45-c)
+
+Yep.
+
+https://m.wolframalpha.com/input/?i=limit+%281-%281-ax%29%5E%28t%2Fx%29%29+as+x+goes+to+0
 
 
