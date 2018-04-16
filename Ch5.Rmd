@@ -911,3 +911,50 @@ Yep.
 https://m.wolframalpha.com/input/?i=limit+%281-%281-ax%29%5E%28t%2Fx%29%29+as+x+goes+to+0
 
 
+#46-a)
+
+```{r, echo=TRUE, eval=TRUE}
+curve(0.5*exp(abs(x)),from=-3, to=3, 1000)
+```
+
+```{r, echo=TRUE, eval=TRUE}
+curve(exp(-x),from=0, to=3, 1000)
+```
+
+#46-b)
+
+$P(SX\le g)=P(SX\le g | S=1)P(S=1)+P(SX\le g | S=-1)P(S=-1)$
+
+$=P(X\le g)0.5+1\cdot0.5$
+
+$=0.5(1+cdf(g))$
+
+so pdf is $0.5\cdot pdf(g)$
+
+same pdf with laplace for x>0
+
+#47)
+
+$P(T>0.1)$ means the probability of the 3rd email arriving after 0.1 hours
+
+means at most 2 emails before that time.
+
+the number of emails N that arrive at or before time t is distributed as Pois(20t)
+
+So P(N=0) or P(N=1) or P(N=2)
+
+sum them
+
+$e^{-2}(2^0+2^1+2^2/2)$
+
+```{r, echo=TRUE, eval=TRUE, cache=TRUE}
+exp(-2)*(2^0+2^1+(2^2)/2)
+```
+
+or
+
+```{r, echo=TRUE, eval=TRUE, cache=TRUE}
+ppois(2,2)
+```
+
+#48)
