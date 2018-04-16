@@ -880,4 +880,10 @@ sum(results)/10^4
 (7/(7+3))^5
 ```
 
+By direct calculation, 1-(the result below)
+
+https://m.wolframalpha.com/input/?i=integrate+%28sum+%28%28%287t%29%5Ek%29%28e%5E%28-7t%29%29%29%2Fk%21+from+k%3D0+to+4%29+%283e%5E%28-3t%29%29+dt+from+0+to+infinity
+
+
+
 
