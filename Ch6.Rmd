@@ -239,3 +239,7 @@ curve(dnorm(log(x))/x,from=0.01, to=1, 1000)
 ```
 
 So Student B is not correct
+
+#9-c)
+
+Nope
