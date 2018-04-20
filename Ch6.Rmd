@@ -123,4 +123,4 @@ Here all are the same
 #5)
 if n is odd (n+1)/2 is the median, all are modes
 
-if n is even n/2 and (n/2)+1 medians, all are modes
+if n is even n/2 and (n/2)+1 medians (or by convention the middle of those), all are modes
