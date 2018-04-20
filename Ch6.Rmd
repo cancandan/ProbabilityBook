@@ -64,8 +64,38 @@ $$
 
 #3)
 
+integrate to find the cdf
 
+$$
+  \begin{align}
+  \int_1^t ax^{-(a+1)}&=-x^{-a}\Big|_1^t \\
+  &=-t^{-a}--1\\
+  &=1-t^{-a}
+  \end{align}
+$$
+find the inverse
 
+$$
+  \begin{align}
+    1-t^{-a}&=y\\
+    1-y&=t^{-a}\\
+    (1-y)^{-1/a}&=t
+  \end{align}
+$$
+
+Set y=1/2, so the median is
+
+$$
+  (1/2)^{-1/a}
+$$
+
+The pdf is a decreasing function.
+For example the curve for a=2 looks like this.
+So the max is at x=1, ie. mode is a
+
+```{r, echo=TRUE}
+curve(2/(x^3), from=1, to=10, 100)
+```
 
 #4)
 
