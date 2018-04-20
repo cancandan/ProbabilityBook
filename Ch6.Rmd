@@ -124,3 +124,47 @@ Here all are the same
 if n is odd (n+1)/2 is the median, all are modes
 
 if n is even n/2 and (n/2)+1 medians (or by convention the middle of those), all are modes
+
+
+#6)
+
+```{r, eval=TRUE}
+#A mostly non rainy year
+
+rain<-rep(0,365)
+days<-sample(1:365,10)
+amounts<-sample(1:10,10)
+rain[days]<-amounts
+
+mean(rain)
+median(rain)
+max(rain)
+
+
+mean(rain[rain>0])
+median(rain[rain>0])
+max(rain[rain>0])
+```
+
+#7)
+
+beta with a=4, b=3
+
+```{r, echo=TRUE}
+  curve(x^3*(1-x)^2, from=0, to=1, 100)
+```
+
+$$
+  \begin{align}
+  \frac{d}{dx}x^{a-1}(1-x)^{b-1}&=(a-1)x^{a-2}(1-x)^{b-1}-x^{a-1}(b-1)(1-x)^{b-2}\\
+  &=0\\
+  \end{align}
+$$
+
+gives
+
+$$
+  x=(a-1)/(a+b-2)
+$$
+
+#8)
