@@ -189,3 +189,53 @@ plug in 1/2
 ```{r, echo=TRUE}
   curve(x^2*(1-x)^0, from=0, to=1, 100)
 ```
+
+#9-a)
+To find the cdf of log normal,
+
+compute
+$$
+  
+  P(Y\le k)=P(e^X\le k)=P(X\le log(k))=F(log(k))
+$$
+where F is the cdf of X
+
+So when is $F(log(k))=1/2$
+when $logk=\mu$
+or when $k= e^{\mu}$
+
+so Student A is correct
+
+for example
+
+```{r, echo=TRUE}
+x<-exp(rnorm(1000000,2,2))
+median(x)-exp(2)
+```
+
+
+
+#9-b)
+To find the pdf take the derivative of the above.
+
+We get 
+
+$$
+  f(log(k))/k
+$$
+
+where f is the pdf of normal.
+
+To find the maximum:
+
+```{r, echo=TRUE}
+h<-function(k) dnorm(log(k))/k
+optimize (h,lower=0, upper=1,maximum = TRUE)
+```
+
+
+```{r}
+curve(dnorm(log(x))/x,from=0.01, to=1, 1000)
+```
+
+So Student B is not correct
