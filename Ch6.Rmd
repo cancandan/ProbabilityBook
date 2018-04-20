@@ -1,0 +1,96 @@
+#1)
+
+$$P(U\le ?)=1/2$$
+
+$$F^{-1}(1/2)=?$$
+
+
+cdf of U is 
+
+$$\frac {x-a}{b-a}$$
+
+So if
+
+
+$$
+  y=\frac {x-a}{b-a}
+$$
+
+$$
+  y(b-a)+a=x
+$$
+
+$$
+  F^{-1}(x)=x(b-a)+a
+$$
+
+$$
+  F^{-1}(1/2)=(b+a)/2
+$$
+
+
+Mode of U is every point between a and b.
+
+
+#2)
+
+cdf of X is F(x) is
+
+$$
+  1-e^{-\lambda x}
+$$
+Find the inverse
+
+$$
+  \begin{aligned}
+    y&=1-e^{-\lambda x}\\
+    e^{-\lambda x}&=1-y\\
+    -\lambda x&=log(1-y)\\
+    x&=-\frac{log(1-y)}{\lambda}
+  \end{aligned}
+$$
+So
+
+$$ F^{-1}(1/2) = -\frac{log(1/2)}{\lambda} $$
+
+Since mode is the value that maximizes the pdf, and the pdf is a decreasing function, its max is at 0
+
+$$
+  \begin{align}
+  f(x)&=\lambda e^{-\lambda x}\\
+  f(0)&=\lambda
+  \end{align}
+$$
+
+#3)
+
+
+
+
+#4)
+
+```{r, echo=TRUE, eval=TRUE, cache=TRUE}
+plot(0:5,dbinom(0:5,5,1/3))
+
+which.max(pbinom(0:5,5,1/3)>=0.5)-1
+
+which.max(dbinom(0:5,5,1/3))-1
+```
+
+Then middle of 1 and 2 is the median
+and 1,2 are the modes
+
+```{r, echo=TRUE, eval=TRUE, cache=TRUE}
+plot(0:6,dbinom(0:6,6,1/3))
+
+which.max(pbinom(0:6,6,1/3)>=0.5)-1
+
+which.max(dbinom(0:6,6,1/3))-1
+```
+
+Here all are the same
+
+#5)
+if n is odd (n+1)/2 is the median, all are modes
+
+if n is even n/2 and (n/2)+1 medians, all are modes
