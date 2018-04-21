@@ -243,3 +243,40 @@ So Student B is not correct
 #9-c)
 
 Nope
+
+
+#10) TODO
+
+#11-a)
+
+Skew of $Z_j$ is the skew of $X_j$ because
+
+$$
+  \begin{align}
+  E(\frac{Z_j-\mu_{Z_j}}{\sigma_{Z_j}})^3&=E(\frac{Z_j-0}{1})^3\\
+  &=E(Z_j)^3\\
+  &=E(\frac{X_j-\mu}{\sigma})^3
+  \end{align}
+$$
+
+Skew of $\bar{Z_n}$ is
+
+$$
+E(\frac{\bar{Z_n}-\mu_{\bar{z_n}}}{\sigma_{\bar{z_n}}})^3
+$$
+
+$\mu_{\bar{z_n}}=E(\bar{Z_n})$ is the mean of the sample mean of the standardized X, which equals 0 because the sample mean is unbiased
+
+$\sigma_{\bar{z_n}}=\sqrt{Var(\bar{Z_n})}=\sqrt{\frac{1^2}{n}}=\sqrt{1/n}$
+
+and
+
+$\bar{Z_n}=\frac{1}{n}\sum_{j=1}^{n}Z_j=\frac{1}{n}\sum_{j=1}^{n}\frac{X_j-\mu}{\sigma}$
+
+putting those in place we get
+
+$$
+E(\frac{(\frac{1}{n}\sum_{j=1}^{n}\frac{X_j-\mu}{\sigma})-0}{\sqrt{1/n}})^3=E(\frac{\sqrt{n}}{\sigma}\sum_{j=1}^{n}\frac{X_j-\mu}{n})^3=E(\frac{\sqrt{n}}{\sigma}(\bar{X_n}-\mu))^3=E(\frac{\bar{X_n}-\mu_{\bar{x_n}}}{\sigma_{\bar{x_n}}})^3
+$$
+
+But that is the skew of $\bar{X_n}$
