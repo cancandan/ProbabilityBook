@@ -308,3 +308,58 @@ By theorem 7.3.2, expectation of the product of independent rvs are the product 
 #11-c)
 
 When n is large this says skewness of the sample mean is 0.
+
+#12)
+
+eg:
+
+```{r, echo=TRUE}
+x<-rnorm(1000,10,3)
+mean(x)^2
+sum(x^2)/1000
+
+x<-rnorm(1000,10,4)
+mean(x)^2
+sum(x^2)/1000
+
+```
+
+suggests there is a $\sigma ^2$ difference
+
+By (RMS, MA inequality) derived from Cauchy Schwarz, T2 is always greater than or equal to T1, so unless all are the same, probability is 1
+
+#12-b)
+
+sampling distr of the sample mean is normal by CLT
+
+has mean $\mu$
+
+and variance $\sigma^2/n$
+
+using
+$$
+  E(\bar{X_n}^2)=Var(\bar{X_n})+(E(\bar{X_n}))^{2}
+$$  
+we get
+$$
+  E(\bar{X_n}^2)=\sigma^2/n+\mu^2
+$$
+
+so for T1
+
+$$
+  E(\bar{X_n}^2)-c^2=\sigma^2/n
+$$
+
+For T2, we know from p253 
+
+$$
+  E(1/n\sum_{j=1}^n X_j^2)=E(X_1^2)
+$$
+So 
+
+$$
+  E(X_1^2)=Var(X_1)+(E(X_1))^{2}=\sigma^2+c^2\\
+  E(X_1^2)-c^2=\sigma^2
+$$ 
+
