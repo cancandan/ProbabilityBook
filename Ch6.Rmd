@@ -377,4 +377,42 @@ $$
   (E(e^{tX}))^{60}=\int_0^1 e^{tx}dx=(\frac{e^{tx}}{t}\Big|_0^1)^{60}=(\frac{e^t-1}{t})^{60}
 $$
 
-#15)
+#15-a)
+
+$$
+  (1-2t)^{-1}
+$$
+
+
+#15-b)
+
+chi-square with k=2
+https://en.wikipedia.org/wiki/Chi-squared_distribution
+
+have we studied this yet?
+
+
+#16)
+
+We know the mgf of expo
+
+$$
+  \frac{\lambda}{\lambda-t}
+$$
+
+we need to compute the third standardized moment of expo, which is a location-scale transformation.
+
+ie.
+
+$$
+\frac{X-\mu}{\sigma}=\frac{X-(1/\lambda)}{1/\lambda}=\lambda X-1
+$$
+this has the mgf
+
+$$
+  e^{-t}M(\lambda t)=e^{-t}\frac{\lambda}{\lambda-\lambda t}=\frac{e^{-t}}{1-t}
+$$
+
+third derivative of this evaluated at 0 is 2
+
+https://m.wolframalpha.com/input/?i=third+derivative+of+e%5E%28-x%29%2F%281-x%29+at+0
