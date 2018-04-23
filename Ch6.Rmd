@@ -416,3 +416,6 @@ $$
 third derivative of this evaluated at 0 is 2
 
 https://m.wolframalpha.com/input/?i=third+derivative+of+e%5E%28-x%29%2F%281-x%29+at+0
+
+
+#17)
