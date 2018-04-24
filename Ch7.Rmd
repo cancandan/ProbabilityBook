@@ -47,9 +47,7 @@ So P(|A-B|>5)=P(|X-Y|>1/4)
 This is the exercise 1 in reverse so 1-7/16=9/16
 
 
-#5)
-
-
+#5-a)
 
 |Table|X=1|X=2|X=3|X=4|X=5|X=6|Total
 |---|---|---|---|---|---|---|---|
@@ -61,3 +59,14 @@ This is the exercise 1 in reverse so 1-7/16=9/16
 |Y=5|0|0|0|0|$\frac{1}{6}\cdot\frac{1}{2}^5\binom{5}{5}$|$\frac{1}{6}\cdot\frac{1}{2}^6\binom{6}{5}$|`r (1/6)*sum(choose(1:6,5)*(1/2)^(1:6))`
 |Y=6|0|0|0|0|0|$\frac{1}{6}\cdot\frac{1}{2}^6\binom{6}{6}$|`r (1/6)*sum(choose(1:6,6)*(1/2)^(1:6))`
 |TOTAL|`r (1/6)*(1/2)^1*sum(choose(1,0:1))`|`r (1/6)*(1/2)^2*sum(choose(2,0:2))`|`r (1/6)*(1/2)^3*sum(choose(3,0:3))`|`r (1/6)*(1/2)^4*sum(choose(4,0:4))`|`r (1/6)*(1/2)^5*sum(choose(5,0:5))`|`r (1/6)*(1/2)^6*sum(choose(6,0:6))`|`r sum(sapply(0:6,function(x) (1/6)*sum(choose(1:6,x)*(1/2)^(1:6))))`|
+
+No not independent for example 
+P(Y=2,X=1)=0 but P(Y=2)P(X=1) is not
+
+#5-b)
+
+Read from the margins
+
+#5-c)
+
+Normalize each row and column by the total at the end of that row, column.
