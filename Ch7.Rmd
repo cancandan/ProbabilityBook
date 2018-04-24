@@ -84,3 +84,38 @@ $$
   f_{X|Y}=\frac{f_{Y|X}\cdot f_X}{f_Y}=\frac{\frac{1}{xL}}{\frac{1}{L}ln\frac{L}{y}}=\frac{1}{xln{\frac{L}{y}}}
 $$
 
+#8-a)
+
+This is with replacement so,
+the probability of Queen happening a times, King b times and Other c times is
+
+$$
+(\frac{4}{52})^a(\frac{4}{52})^b(\frac{44}{52})^c
+$$
+In how many different ways can this happen?
+
+$$
+  \binom{5}{a}\binom{5-a}{b}\binom{5-a-b}{c}=\frac{5!}{a!b!c!}
+$$
+
+So
+
+$$
+  P(X=a,Y=b,Z=c)=\frac{5!}{a!b!c!}(\frac{4}{52})^a(\frac{4}{52})^b(\frac{44}{52})^c
+$$
+
+This is the multinomial story.
+
+#8-b)
+
+To marginalize out the Z, notice that a given (X=a, Y=b) happens with only one Z value ie. (5-a-b), there is nothing to sum, or said another way, the sum has only one term.
+
+$$
+  P(X=a,Y=b)=P(X=a,Y=b,Z=5-a-b)=\frac{5!}{a!b!c!}(\frac{4}{52})^a(\frac{4}{52})^b(\frac{44}{52})^{5-a-b}
+$$
+
+#8-c)
+
+$$
+  P(X=a,Y=b,Z=5-a-b)=\frac{\binom{4}{a}\binom{4}{b}\binom{44}{5-a-b}}{\binom{52}{5}}
+$$
