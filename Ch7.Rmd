@@ -70,3 +70,17 @@ Read from the margins
 #5-c)
 
 Normalize each row and column by the total at the end of that row, column.
+
+
+#7)
+
+$$
+  f_X(x)=\frac{1}{L}\\
+  f_{Y|X}(x,y)=\frac{1}{x}\\
+  f_{X,Y}(x,y)=\frac{1}{Lx}\\
+  f_X(x)=\int_0^x\frac{1}{Lx}dy=\frac{y}{Lx}\Big|_0^x=\frac{1}{L}\\
+  f_{Y|X}=\frac{f_{X,Y}}{f_X}=\frac{1}{Lx}/\frac{1}{L}=\frac{1}{x}\\
+  f_Y(y)=\int_y^{L}\frac{1}{Lx}dx=\frac{1}{L}(ln(L)-ln(y))=\frac{1}{L}ln\frac{L}{y}\\
+  f_{X|Y}=\frac{f_{Y|X}\cdot f_X}{f_Y}=\frac{\frac{1}{xL}}{\frac{1}{L}ln\frac{L}{y}}=\frac{1}{xln{\frac{L}{y}}}
+$$
+
