@@ -171,3 +171,29 @@ $$
 $$
 
 Is this valid? yes, positive and integrates to 1.
+
+#11-a)
+
+$$
+  X\sim N(0,1)\\
+  Y|X, Z|X\sim N(x,1)
+$$
+Joint pdf of X,Y,Z
+$$
+  \phi(y-x)\phi(z-x)\phi(x)
+$$
+
+
+#11-b) 
+
+Knowing Y gives info about X and hence Z, so not uncond. indep.
+
+#11-c) 
+
+Joint pdf of Y,Z? Integrate out X from the joint of X,Y,Z
+
+$$
+  \int_{-\infty}^{+\infty}\phi(y-x)\phi(z-x)\phi(x)dx
+$$
+
+https://www.wolframalpha.com/input/?i=integrate+(1%2Fsqrt(2*pi))%5E3e%5E(-(z-x)%5E2%2F2)e%5E(-(y-x)%5E2%2F2)e%5E(-(x)%5E2%2F2)+from+x%3D-infinity+to+x%3D%2Binfinity
