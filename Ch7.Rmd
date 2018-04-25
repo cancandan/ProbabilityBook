@@ -119,3 +119,55 @@ $$
 $$
   P(X=a,Y=b,Z=5-a-b)=\frac{\binom{4}{a}\binom{4}{b}\binom{44}{5-a-b}}{\binom{52}{5}}
 $$
+
+#9)
+
+
+#10-a)
+
+$$
+  P(X+Y\le t|X=x)=P(Y\le t-x)\\
+  =1-e^{-\lambda(t-x)}
+$$
+and zero for t-x<=0
+
+#10-b)
+
+This is the derivative of part a
+
+$$
+  \frac{d}{dt}(1-e^{-\lambda(t-x)})=\frac{d}{dt}(1-e^{-\lambda t}e^{\lambda x})=\lambda e^{\lambda x}e^{-\lambda t}=\lambda e^{\lambda(x-t)}
+$$
+Is this valid? This is for t>x, its positive and integral wrt t of that from x to +infinity is what? 
+
+$$
+  1-e^{-\lambda(t-x)}\Big|_x^{+\infty}=1-(1-1)=1
+$$
+
+#10-c) 
+
+$$
+  f_{X|T}=\frac{f_{T|X}f_X}{f_T}
+$$
+
+
+$$
+  f_{T|X}\cdot f_X=\lambda e^{\lambda(x-t)}\lambda e^{-\lambda x}=\lambda^2e^{-\lambda t}
+$$
+
+We know that $f_{X|T}$ should integrate to 1 for x from 0 to t and that the marginal of T is some constant for a given t.
+
+therefore
+
+$$
+  \frac{1}{f_T}\int_0^{t} \lambda^2e^{-\lambda t} dx=1\\
+  (\frac{\lambda^2}{f_T}e^{-\lambda t})x\Big|_0^t=1\\
+  (\frac{\lambda^2}{f_T}e^{-\lambda t})t=1\\
+  f_T=\lambda^2te^{-\lambda t}
+$$
+Hence 
+$$
+  f_{X|T}=\frac{1}{t}
+$$
+
+Is this valid? yes, positive and integrates to 1.
