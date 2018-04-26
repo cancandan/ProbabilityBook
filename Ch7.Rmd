@@ -197,3 +197,41 @@ $$
 $$
 
 https://www.wolframalpha.com/input/?i=integrate+(1%2Fsqrt(2*pi))%5E3e%5E(-(z-x)%5E2%2F2)e%5E(-(y-x)%5E2%2F2)e%5E(-(x)%5E2%2F2)+from+x%3D-infinity+to+x%3D%2Binfinity
+
+#13-a)
+
+We are asked the distribution of $X|(X<Y)$, lets find the cdf first then differentiate to get the pdf
+
+Since X,Y are independent, we know that the joint pdf is
+
+$$
+  \lambda^2e^{-\lambda x}e^{-\lambda y}
+$$
+
+So to calculate the cdf
+$$
+  \begin{align}
+  P(X\le g|X\lt Y)&=\int_{0}^{g}\int_x^{+\infty} \lambda^2e^{-\lambda x}e^{-\lambda y}dydx\\
+  &=\int_{0}^{g} \lambda e^{-\lambda x} \int_x^{+\infty} \lambda e^{-\lambda y}dydx\\
+  &=\int_{0}^{g} \lambda e^{-\lambda x} (-\lambda e^{-\lambda y})\Big|_{x}^{+\infty} dx\\
+  &=\int_{0}^{g}e^{-\lambda x}\lambda e^{-\lambda x}dx\\
+  &=\int_{0}^{g}\lambda e^{-2\lambda x}dx\\
+  &=\frac{-e^{-2\lambda x}} {2}\Big|_{0}^{g}\\
+  &=\frac{1}{2}(1-e^{-2\lambda g})
+  \end{align}
+$$
+
+Plug in $+\infty$ above to find 
+$$
+  P(X\lt Y)=\int_{0}^{+\infty}\int_x^{+\infty} \lambda^2e^{-\lambda x}e^{-\lambda y}dydx=1/2
+$$
+
+Therefore the cdf is
+
+$$
+  1-e^{-2\lambda g}
+$$
+
+which agrees with part b of this question, the uncond. distrib. of min of 2 iid $Expo(\lambda)$ is indeed $Expo(2\lambda)$
+
+its easy to find the pdf by differentiating now.
