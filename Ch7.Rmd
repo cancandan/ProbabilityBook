@@ -310,12 +310,15 @@ $$
   &=e^{-\lambda_1 x_1}\frac{e^{-\lambda_0 x_1}}{e^{-\lambda_0 x_2}}
   \end{align}
 $$
-
+$$
+  P(X_2\gt x_2)=P(C_0>x2 \land C2>x2)=e^{-\lambda_0 x_2}e^{-\lambda_2 x_2}
+$$
 
 Hence 
 $$
-  e^{-\lambda_1 x_1}\frac{e^{-\lambda_0 x_1}}{e^{-\lambda_0 x_2}}e^{-\lambda_2 x_2}=e^{-(\lambda_0+\lambda1)x1}e^{-(\lambda_2-\lambda_0)x_2}
+  e^{-\lambda_1 x_1}\frac{e^{-\lambda_0 x_1}}{e^{-\lambda_0 x_2}}e^{-\lambda_0 x_2}e^{-\lambda_2 x_2}=e^{-(\lambda_0x1+\lambda_1x1+\lambda2x_2)}
 $$
+
 
 
 An experiment:
@@ -332,8 +335,8 @@ c1<-rexp(n,l1)
 c2<-rexp(n,l2)
 
 
-x1<-10
-x2<-4
+x1<-9
+x2<-7
 xmax<-max(x1,x2)
 
 #these are the same
