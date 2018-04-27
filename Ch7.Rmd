@@ -235,3 +235,125 @@ $$
 which agrees with part b of this question, the uncond. distrib. of min of 2 iid $Expo(\lambda)$ is indeed $Expo(2\lambda)$
 
 its easy to find the pdf by differentiating now.
+
+
+#23)
+
+
+```{r, echo=TRUE}
+f<-function(n) {(0.5)^n*pi^{n/2}/(gamma(1+n/2))}
+
+plot(2:10,f(2:10))
+```
+
+This agrees with the simulation
+
+```{r,echo=TRUE}
+  numpts<-10^5
+  x<-runif(numpts,-1,1)
+  y<-runif(numpts,-1,1)
+  z<-runif(numpts,-1,1)
+  w<-runif(numpts,-1,1)
+  
+  sum(x^2+y^2<=1)/numpts
+  f(2)
+  
+  sum(x^2+z^2+y^2<=1)/numpts
+  f(3)
+  
+  sum(x^2+z^2+y^2+w^2<=1)/numpts
+  f(4)
+```
+
+For part c, $X_n$ must be Binom(n,p), where p is 
+$$
+  p=2(1-c)/2=1-c
+$$
+
+
+$c=1/\sqrt(2)$ is the right side of an isoceles right triangle with hypotenuse 1. 
+
+
+```{r, echo=TRUE}
+c=1/sqrt(2)
+p=2*(1-c)/2
+x<-dbinom(2:10,2:10,p)
+plot(2:10,x)
+```
+
+#25-a)
+
+Let $C_0$ be the first time for the global crash and $C_i$ first time crash of company i.
+
+We need to find 
+$$
+  P(X_1\le t)=1-P(X_1\ge t)=1-P(C_0\ge t \land C_1\ge t)
+$$
+
+So we get the marginals
+
+$$
+  F_{X_1}=1-e^{-\lambda_0 t}e^{-\lambda_1 t}\\
+  F_{X_2}=1-e^{-\lambda_0 t}e^{-\lambda_2 t}
+$$
+#25-b)
+
+$$
+  P(X_1\gt x_1, X_2\gt x_2)=P(X_1\gt x_1|X_2\gt x_2)P(X_2\gt x_2)
+$$
+
+
+$$
+  \begin{align}
+  P(X_1\gt x_1|X_2\gt x_2)&=P(C_1\gt x_1 \land C_0\gt x_1|C_0\gt x_2)\\
+  &=P(C_1\gt x_1)P(C_0\gt x_1|C_0\gt x_2)\\
+  &=e^{-\lambda_1 x_1}\frac{e^{-\lambda_0 x_1}}{e^{-\lambda_0 x_2}}
+  \end{align}
+$$
+
+
+Hence 
+$$
+  e^{-\lambda_1 x_1}\frac{e^{-\lambda_0 x_1}}{e^{-\lambda_0 x_2}}e^{-\lambda_2 x_2}=e^{-(\lambda_0+\lambda1)x1}e^{-(\lambda_2-\lambda_0)x_2}
+$$
+
+
+An experiment:
+
+```{r, echo=TRUE}
+n<-10^5
+# successes per unit time
+l0<-1/10
+l1<-1/4
+l2<-1/7
+
+c0<-rexp(n,l0)
+c1<-rexp(n,l1)
+c2<-rexp(n,l2)
+
+
+x1<-10
+x2<-4
+xmax<-max(x1,x2)
+
+#these are the same
+1-sum(c1[c0>=x1]>=x1)/n
+
+sum(pmin(c0,c1)<=x1)/n
+
+#check
+pexp(10,l0+l1)
+
+
+#P(X1>x1,X2>x2), if x1>x2
+i1<-which(c0>x1)
+i2<-which(c1>x1)
+i3<-which(c2>x2)
+intr<-intersect(intersect(i1,i2),i3)
+
+length(intr)/n
+
+#check
+exp(-(l1*x1+l2*x2+l0*x1))
+```
+
