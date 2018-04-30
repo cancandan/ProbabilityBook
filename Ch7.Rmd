@@ -1,3 +1,8 @@
+---
+header-includes:
+   - \usepackage{amsmath}
+---
+
 #1)
 
 If the arrival time is A, the A/60 is Unif(0,1)
@@ -296,6 +301,7 @@ $$
   F_{X_1}=1-e^{-\lambda_0 t}e^{-\lambda_1 t}\\
   F_{X_2}=1-e^{-\lambda_0 t}e^{-\lambda_2 t}
 $$
+
 #25-b)
 
 $$
@@ -359,4 +365,75 @@ length(intr)/n
 #check
 exp(-(l1*x1+l2*x2+l0*x1))
 ```
+
+#29)
+
+Joint pmf of L,M is J(l,m)
+
+$$
+    J(l,m)=P(L=l, M=m)= 
+\begin{cases}
+    2q^lpq^mp,& \text{if } l\leq m\\
+    0,              & \text{otherwise}
+\end{cases}
+$$
+```{r}
+p=0.23
+q=1-p
+n<-10^7
+x<-rgeom(n,p)
+y<-rgeom(n,p)
+themin<-pmin(x,y)
+themax<-pmax(x,y)
+l=3
+m=7
+
+#joint test
+sum(themax[themin==l]==m)/n
+q^(l+m)*(2*p^2)
+
+
+#L>l test
+sum(themin>l)/n
+f<-function(l) (q^(l+1))^2
+
+#pmf of L test
+sum(themin==l)/n
+f(2)-f(3)
+```
+
+
+Find marginal pmf of L from the joint by marginalizing
+
+$$  
+  \sum_{m=l}^{+\infty}2q^lpq^mp=2q^{2l}p^2\sum_{k=0}^{+\infty}q^k=2q^{2l}p^2\frac{1}{1-q}=2q^{2l}p
+$$
+
+
+
+$$
+  E(M)=E(X)+E(Y)-E(L)\\
+  E(L)=\sum_{k=0}^{+\infty}kq^{2k}p\\
+  =p\sum_{k=0}^{+\infty}k(q^2)^k
+$$  
+
+arithmetico-geometric series, find the sum using
+https://en.wikipedia.org/wiki/Arithmetico%E2%80%93geometric_sequence#Infinite_series
+
+#34)
+Straightforward integration, here is a simulation
+By rejection sampling
+```{r, echo=TRUE}
+n<-10^4
+x<-runif(n)
+y<-runif(n)
+inindx<-(y<=1-x)
+x<-x[inindx]
+y<-y[inindx]
+plot(x,y)
+cov(x,y)
+```
+
+
+
 
